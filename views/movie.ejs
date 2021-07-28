@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/hardiksinghrana/image/upload/v1627113730/Cinemanter/C-2.png"
+    />
+    <title>Cinemanter</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/movie.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <form
+      action="/results"
+      id="searchMovies"
+      method="POST"
+      class="form-inline validated-form my-2 my-lg-0 ml-auto"
+      novalidate
+    >
+      <input
+        class="form-control"
+        id="query"
+        name="query"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+        required
+      />
+      <button class="btn" type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+    <main>
+      <div
+        class="container-fluid bg-transparent my-4 p-3"
+        style="position: relative"
+      >
+        <h1 class="cent pb-4">POPULAR MOVIES</h1>
+        <div
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3"
+        >
+          <% Search.forEach(srch => { %>
+          <a href="/movie/<%= srch['imdbID'] %>">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="<%= srch['Poster'] %>" class="card-img-top" />
+                <div class="card-body">
+                  <h1 class="card-title"><%= srch['Title'] %></h1>
+                  <h2 class="card-title"><%= srch['Year'] %></h2>
+                </div>
+              </div>
+            </div>
+          </a>
+          <% }); %>
+        </div>
+      </div>
+
+      <!-- <div class="container">
+        <ul>
+          <% Search.forEach(srch => { %>
+          <li><%= srch %></li>
+          <% }) %>
+        </ul>
+      </div> -->
+      <!-- <div
+        class="container-fluid bg-transparent my-4 p-3"
+        style="position: relative"
+      >
+        <h1>Popular Movies</h1>
+        <div
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3"
+        >
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h1 class="card-title">Guardians of the Galaxy Vol. 2</h1>
+                <h2 class="card-title pt-2">Action, Adventure, Comedy</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="validateForms.js"></script>
+  </body>
+</html>

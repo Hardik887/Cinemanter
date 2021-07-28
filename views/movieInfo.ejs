@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/hardiksinghrana/image/upload/v1627113730/Cinemanter/C-2.png"
+    />
+    <title>Cinemanter</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/movie.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="img-fluid img-responsive pt-3 pb-3">
+          <img class="sz rounded float-right" src= "<%= imdbID["Poster"] %>">
+        </div>
+        <div class="container movie_data">
+          <h3><%= imdbID["Title"] %></h3>
+          <p>
+              <div>
+                  <i class="fab fa-imdb fa-1x"></i> <b><%= imdbID["imdbRating"] %></b>/10
+                  -  <%=
+                imdbID["Runtime"] %> - <%= imdbID["Year"] %>
+                    </div>
+          </p>
+          <p><%= imdbID["Plot"] %></p>
+          <p><b>Directors</b> <%= imdbID["Director"] %></p>
+          <p><b>Writers</b> <%= imdbID["Writer"] %></p>
+          <p><b>Starring</b> <%= imdbID["Actors"] %></p>
+          <p><b>Genres</b> <%= imdbID["Genre"] %></p>
+          <p><b>Audio Language</b> <%= imdbID["Language"] %></p>
+          <p><b>Release Date</b> <%= imdbID["Released"] %></p>
+          <h3>More details</h3>
+          <p><b>Production</b> <%= imdbID["Production"] %></p>
+          <p><b>Awards</b> <%= imdbID["Awards"] %></p>
+          <p><b>Box Office</b> <%= imdbID["BoxOffice"] %></p>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="validateForms.js"></script>
+  </body>
+</html>
