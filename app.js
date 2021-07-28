@@ -24,7 +24,7 @@ app.use(helmet({ contentSecurityPolicy: false }));
 
 const getSearchimdbID = async (movieSearch) => { 
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?s=${movieSearch}&apikey=API_KEY`
+    `https://www.omdbapi.com/?s=${movieSearch}&apikey=7f54fa5e`
   );
 
   let SearchArray = getValue.data.Search;
@@ -34,7 +34,7 @@ const getSearchimdbID = async (movieSearch) => {
 
 const getSearch = async (movieSearch) => {
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?s=${movieSearch}&apikey=API_KEY`
+    `https://www.omdbapi.com/?s=${movieSearch}&apikey=7f54fa5e`
   );
 
   let SearchArray = getValue.data.Search;
@@ -43,7 +43,7 @@ const getSearch = async (movieSearch) => {
 
 const getimdbID = async (movieID) => {
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?i=${movieID}&apikey=API_KEY`
+    `https://www.omdbapi.com/?i=${movieID}&apikey=7f54fa5e`
   );
   let SearchArray = getValue.data;
   return SearchArray;
