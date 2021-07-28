@@ -22,9 +22,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(flash());
 app.use(helmet({ contentSecurityPolicy: false }));
 
-const getSearchimdbID = async (movieSearch) => {
+const getSearchimdbID = async (movieSearch) => { 
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?s=${movieSearch}&apikey=58b2343f`
+    `https://www.omdbapi.com/?s=${movieSearch}&apikey=API_KEY`
   );
 
   let SearchArray = getValue.data.Search;
@@ -34,7 +34,7 @@ const getSearchimdbID = async (movieSearch) => {
 
 const getSearch = async (movieSearch) => {
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?s=${movieSearch}&apikey=58b2343f`
+    `https://www.omdbapi.com/?s=${movieSearch}&apikey=API_KEY`
   );
 
   let SearchArray = getValue.data.Search;
@@ -43,7 +43,7 @@ const getSearch = async (movieSearch) => {
 
 const getimdbID = async (movieID) => {
   const getValue = await axios.get(
-    `https://www.omdbapi.com/?i=${movieID}&apikey=58b2343f`
+    `https://www.omdbapi.com/?i=${movieID}&apikey=API_KEY`
   );
   let SearchArray = getValue.data;
   return SearchArray;
