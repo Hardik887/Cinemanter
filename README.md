@@ -29,3 +29,5 @@ The search input can search for movie names and movies related to a famous perso
 When you search for something and hit enter you will be redirected to the results.
 <br></br>
 You can further view a detail information of movie by clicking on it.
+# My Portfolio
+https://hardiksinghrana.com/
