@@ -1,4 +1,6 @@
 # Cinemanter
+Cinemanter is a movie listing application using NodeJS along with Axios for making HTTP requests to the OMDb API.
+
 # Demo
 https://user-images.githubusercontent.com/86762452/150696390-03582e40-2d48-4eca-b8aa-5a11aa7dc354.mp4
 
