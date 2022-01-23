@@ -11,9 +11,9 @@ https://hardiksinghrana.com/cinemanter
 # Test yourself
 Follow these steps
 <ul>
-<li>git clone https://github.com/Hardik887/Cinemanter.git</li>
-<li>npm install or yarn
-<li>npm run start or yarn start
+<li><code>git clone https://github.com/Hardik887/Cinemanter.git</code></li>
+<li><code>npm install</code> or <code>yarn</code>
+<li><code>npm run start</code> or <code>yarn start</code>
 The application will open your default browser on https://localhost:3000/
 </ul>
 
